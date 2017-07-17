@@ -1,0 +1,9 @@
+@include cssPrefix('viz-section') {
+  padding-top: 20px;
+}
+
+@include cssPrefix('annotation') {
+  margin-top: 10px;
+  color: $gray-dark;
+  font-size: 14px;
+}

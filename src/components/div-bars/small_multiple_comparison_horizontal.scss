@@ -1,0 +1,157 @@
+@include cssPrefix('small-multiple-comparisonh') {
+  display: block;
+  width: 100%;
+  // FIXME
+  // min-width: $screen-sm;
+  // overflow-x: scroll;
+
+  &__row {
+    width: 100%;
+    display: block;
+
+    &:after {
+      display: block;
+      content: '';
+      clear: both;
+    }
+
+    &__label {
+      margin-top: 15px;
+      font-family: $font-neuzeit;
+      font-size: 18px;
+      line-height: 22px;
+    }
+  }
+
+  &__column {
+    display: block;
+    width: 100%;
+    // width: 25%;
+    // float: left;
+    // padding-right: 10px;
+
+    @include bp-xs {
+      padding-right: 10px;
+      width: 50%;
+      float: left;
+    }
+
+    @include bp-sm {
+      width: 25%;
+      float: left;
+    }
+  }
+
+  &__header {
+    &__title {
+      margin: 0;
+      font-size: 16px;
+    }
+  }
+
+  &__legend {
+    &__list {
+      margin: 0;
+      padding: 0;
+      display: block;
+      width: 100%;
+    }
+
+    &__item {
+      font-size: 14px;
+      display: inline-block;
+      list-style: none;
+      width: 50%;
+
+      &-square {
+        display: inline-block;
+        background-color: $gray;
+        width: 10px;
+        height: 10px;
+      }
+    }
+
+  }
+
+  &__bar-outer {
+
+    &:after {
+      display: block;
+      content: '';
+      clear: both;
+    }
+  }
+
+  &__bar {
+    display: block;
+    height: 20px;
+    background-color: $gray;
+    float: left;
+    margin-bottom: 5px;
+    border-right: 1px solid $white;
+
+    &--svb_ {
+      height: 10px;
+      opacity: .7;
+    }
+
+    // colors
+  }
+
+  &__bar, &__legend__item-square  {
+    // gender
+    &--f {
+      background-color: $female-color;
+    }
+
+    &--m {
+      background-color: $male-color;
+    }
+
+    // origin
+    &--german {
+      background-color: $gray;
+    }
+
+    &--foreign {
+      background-color: $gray-light;
+    }
+
+    // level
+    &--assistant {
+      background-color: $blue-lighter;
+    }
+
+    &--skilled {
+      background-color: $blue-light;
+    }
+
+    &--specialist {
+      background-color: $blue;
+    }
+
+    &--expert {
+      background-color: $blue-dark;
+    }
+
+    // education
+    &--wo_graduation {
+      background-color: $beige-light;
+    }
+
+    &--training_qualification {
+      background-color: $beige;
+    }
+
+    &--academic_degree {
+      background-color: $beige-dark;
+    }
+
+    &--edu_unknown {
+      background-color: $gray;
+    }
+
+  }
+
+
+}
