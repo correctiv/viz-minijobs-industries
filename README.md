@@ -31,6 +31,9 @@ dist/styles/bundle.css
   <div class="figure__container">
     <h2>In diesen Branchen arbeiten die meisten Minijobber</h2>
     <div data-riot-mount="cor-mj-industries-main"></div>
+    <div class="figure__credits">
+      Daten: <a href="">Statistik der Bundesagentur für Arbeit: Sozialversicherungspflichtig und geringfügig Beschäftigte nach Wirtschaftszweigen der WZ 2008</a>, Stand: 31.12.2015
+    </div>
   </div>
 </figure>
 ```
@@ -42,6 +45,9 @@ dist/styles/bundle.css
   <div class="figure__container">
     <h2>Die Branchen im Vergleich</h2>
     <div data-riot-mount="cor-mj-industries-small-multiples"></div>
+  </div>
+  <div class="figure__credits">
+    Daten: <a href="">Statistik der Bundesagentur für Arbeit: Sozialversicherungspflichtig und geringfügig Beschäftigte nach Wirtschaftszweigen der WZ 2008</a>, Stand: 31.12.2015
   </div>
 </figure>
 ```
