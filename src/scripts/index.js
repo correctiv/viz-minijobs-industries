@@ -9,7 +9,9 @@ import '../styles/index.scss'
 
 // mixins
 import getClass from './mixins/class_name.js'
+import numberFormat from './mixins/number_format.js'
 riot.mixin(getClass('mjid'))
+riot.mixin(numberFormat)
 
 // mount vizes
 import '../components/industries-main.tag'

@@ -1,24 +1,24 @@
 import {topIndustries} from '../scripts/data.js'
-import './div-bars/grouped-bars-horizontal.tag'
+import './div-bars/stacked-barhs.tag'
 
 <cor-mj-industries-main class={ getClass('viz-section') }>
 
-  <grouped-bars-horizontal ref='grouped-bars-horizontal'
-    groups={ data }
-    grouplabel='name'
+  <stacked-barhs
+    ref='stacked-barhs'
+    data={ data }
+    barlabels='name'
     labelformat={ labelformat }
-    initlegend={ ['Minijob', 'Sozialversicherungspflichtig'] }
-    cols={ ['gb_t_relv', 'svb_t_relv'] }
+    cols={ ['gb_t_rel', 'svb_t_rel'] }
     modifiers={ ['gb', 'svb'] }
-    scale=7.5
+    legend={ ['Minijobs', 'sozialversicherungspflichtig'] }
   />
 
   <section class={ getClass('annotation') }>
-    Die angegebenen Prozentwerte beziehen sich jeweils auf die Gesamtzahl der Menschen,
-    die in Minijobs bzw. sozialversicherungspflichtigen Beschäftigungen arbeiten.
+    Die angegebenen Prozentwerte beziehen sich jeweils auf die Summe der Menschen,
+    die in Minijobs und sozialversicherungspflichtigen Beschäftigungen arbeiten.
   </section>
 
   this.data = topIndustries
-  this.labelformat = v => v.toString().replace('.', ',') + ' %'
+  this.labelformat = v => this._f(v) + ' %'
 
 </cor-mj-industries-main>

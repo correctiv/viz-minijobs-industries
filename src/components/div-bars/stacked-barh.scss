@@ -1,0 +1,58 @@
+@include cssPrefix('stacked-barh') {
+
+  display: block;
+  width: 100%;
+  position: relative;
+
+  &:after {
+    display: block;
+    content: '';
+    clear: both;
+  }
+
+  &__bar-outer {
+    display: block;
+    width: 100%;
+    position: relative;
+  }
+
+  &__bar {
+    display: block;
+    height: 30px;
+    background-color: $gray;
+    float: left;
+    position: relative;
+
+    &--gb {
+      background-color: $blue-light;
+    }
+
+    &--svb {
+      background-color: $gray-light;
+    }
+
+    &__label {
+      position: absolute;
+      display: block;
+      font-size: 12px;
+      line-height: 30px;
+      color: $gray-darker;
+
+      &--gb {
+        left: 10px;
+      }
+
+      &--svb {
+        right: 10px;
+      }
+    }
+
+    &__legend {
+      position: absolute;
+      left: 5px;
+      color: $white;
+      font-size: 12px;
+      line-height: 30px;
+    }
+  }
+}

@@ -1,0 +1,67 @@
+@import './stacked-barh.scss';
+
+@include cssPrefix('stacked-barhs') {
+
+  display: block;
+  width: 100%;
+  position: relative;
+
+  &__legend {
+    display: block;
+    width: 100%;
+    height: 50px;
+    position: relative;
+
+    &__item {
+      position: absolute;
+      font-size: 14px;
+      line-height: 15px;
+
+      &--gb {
+        left: 0px;
+
+        span {
+          background-color: $blue-light;
+          margin-right: 10px;
+        }
+      }
+
+      &--svb {
+        right: 25px;
+
+        span {
+          position: absolute;
+          right: -25px;
+          background-color: $gray-light;
+        }
+      }
+
+      span {
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+      }
+
+    }
+
+  }
+
+  &__container {
+    display: block;
+    width: 100%;
+    position: relative;
+    padding-bottom: 30px;
+  }
+
+  &__label {
+    display: block;
+    font-size: 18px;
+    line-height: 18px;
+    font-family: $font-neuzeit;
+    font-weight: bold;
+  }
+
+  &__sub-label {
+    font-size: 16px;
+  }
+}
