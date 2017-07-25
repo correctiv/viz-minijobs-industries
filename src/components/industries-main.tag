@@ -18,7 +18,7 @@ import './div-bars/stacked-barhs.tag'
     die in Minijobs und sozialversicherungspflichtigen Beschäftigungen arbeiten.
   </section>
 
-  this.data = topIndustries
+  this.data = topIndustries.sort((a, b) => b.gb_t_rel - a.gb_t_rel)
   this.labelformat = v => this._f(v) + ' %'
 
 </cor-mj-industries-main>
