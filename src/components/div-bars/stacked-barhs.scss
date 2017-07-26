@@ -18,20 +18,22 @@
       line-height: 15px;
 
       &--gb {
-        left: 0px;
+        left: 20px;
 
         span {
+          position: absolute;
+          left: -20px;
           background-color: $blue-light;
           margin-right: 10px;
         }
       }
 
       &--svb {
-        right: 25px;
+        right: 20px;
 
         span {
           position: absolute;
-          right: -25px;
+          right: -20px;
           background-color: $gray-light;
         }
       }
