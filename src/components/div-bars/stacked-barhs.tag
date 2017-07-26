@@ -11,7 +11,7 @@ import './stacked-barh.tag'
   <div each={ data in opts.data }
     class={ getClass('container') }>
     <span class={ getClass('label') }>{ data[parent.opts.barlabels] }</span>
-    <span class={ getClass('sub-label') }>Minijobber insgesamt: { data.gb_t }</span>
+    <span class={ getClass('sub-label') }>Minijobber insgesamt: { _f(data.gb_t) }</span>
     <stacked-barh
       data={ parent.getData(data) }
       css='stacked-barh' />
