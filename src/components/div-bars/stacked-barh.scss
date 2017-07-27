@@ -31,6 +31,14 @@
       background-color: $gray-light;
     }
 
+    &--empty {
+      background-color: $gray-lighter;
+    }
+
+    // &--full {
+    //   background-color: $green-light;
+    // }
+
     &__label {
       position: absolute;
       display: block;
@@ -38,7 +46,7 @@
       line-height: 30px;
       color: $gray-darker;
 
-      &--gb {
+      &--gb, &--full {
         left: 5px;
       }
 
@@ -55,4 +63,22 @@
       line-height: 30px;
     }
   }
+
+  //colors
+  &__bar-outer--f &__bar--full {
+    background-color: $female-color;
+  }
+
+  &__bar-outer--foreign &__bar--full {
+    background-color: $gray;
+  }
+
+  &__bar-outer--assistant &__bar--full {
+    background-color: $blue-light;
+  }
+
+  &__bar-outer--education &__bar--full {
+    background-color: $green-light;
+  }
+
 }

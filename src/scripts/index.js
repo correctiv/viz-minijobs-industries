@@ -15,7 +15,7 @@ riot.mixin(numberFormat)
 
 // mount vizes
 import '../components/industries-main.tag'
-import '../components/industries-small-multiples.tag'
+import '../components/industries-multi-charts.tag'
 
 const mount = (name) => {
   const selector = `[data-riot-mount="${name}"]`
@@ -23,4 +23,4 @@ const mount = (name) => {
 }
 
 mount('cor-mj-industries-main')
-mount('cor-mj-industries-small-multiples')
+mount('cor-mj-industries-multi-charts')

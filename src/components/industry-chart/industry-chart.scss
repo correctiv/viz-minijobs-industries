@@ -1,0 +1,107 @@
+@include cssPrefix('industry-chart') {
+
+  display: block;
+  width: 100%;
+
+  &__title {
+    font-family: $font-neuzeit;
+
+    @include bp-sm {
+      margin-left: 25%;
+      padding-left: 15px;
+    }
+  }
+
+  &__description {
+    font-size: 15px;
+
+    @include bp-sm {
+      margin-left: 25%;
+      padding-left: 15px;
+    }
+  }
+
+  &__charts-wrapper {
+    display: block;
+    width: 100%;
+    position: relative;
+  }
+
+  &__chart {
+    display: block;
+    width: 100%;
+    padding-bottom: 25px;
+    position: relative;
+
+    &__label {
+      margin: 0;
+      font-family: $font-neuzeit;
+      font-size: 16px;
+      line-height: 20px;
+
+      @include bp-xs {
+        display: block;
+        width: 25%;
+        float: left;
+        text-align: right;
+      }
+    }
+
+    &__bars-container {
+      display: block;
+
+      @include bp-xs {
+        width: 75%;
+        padding-left: 15px;
+        float: left;
+      }
+    }
+
+    &__stacked-barh {
+      display: block;
+      position: relative;
+
+      @include cssPrefix('stacked-barh') {
+        @include bp-sm {
+          width: 65%;
+        }
+      }
+
+      &__label {
+        font-size: 13px;
+        color: $gray-dark;
+
+        @include bp-sm {
+          display: block;
+          width: 35%;
+          padding-left: 10px;
+          position: absolute;
+          right: 0;
+          top: 0;
+        }
+      }
+
+      &--gb {
+        @include cssPrefix('stacked-barh__bar') {
+          margin-top: 5px;
+          height: 20px;
+        }
+      }
+
+      &--svb {
+        @include cssPrefix('stacked-barh__bar') {
+          margin-top: 5px;
+          height: 10px;
+        }
+      }
+    }
+
+    &:after {
+      display: block;
+      content: '';
+      clear: both;
+    }
+
+  }
+
+}
